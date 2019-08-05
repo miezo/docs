@@ -20,3 +20,17 @@ advice: >
 So, here’s some advice I wish I woulda got when I was your age:
 Live every week like...
 ```
+
+For a dynamic length use the following synthax:
+
+```.language.yaml
+mylength: 80
+````
+
+````
+{{ advice | safe_truncate=""{{mylength}}|..." }}
+````
+
+```.language-output
+So, here’s some advice I wish I woulda got when I was your age: Live every...
+```
